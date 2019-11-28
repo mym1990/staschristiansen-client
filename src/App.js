@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Bar, Pie, StackedBar} from 'react-roughviz'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <h1>Fun with Rough-Viz</h1>
+      <h3>Bar</h3>
+      <Bar
+        data="https://raw.githubusercontent.com/jwilber/random_data/master/flavors.csv"
+        labels="flavor"
+        values="price"
+      />
+      <h3>Pie</h3>
+      <Pie
+        data={{
+          labels: ['North', 'South', 'East', 'West'],
+          values: [10, 5, 8, 3],
+        }}
+        title="Regions"
+        colors={['red', 'orange', 'blue', 'skyblue']}
+        roughness={8}
+        strokeWidth={3}
+      />
+      <StackedBar
+        data={[
+          {month: 'Jan', A: 20, B: 5, C: 10},
+          {month: 'Feb', A: 25, B: 10, C: 20},
+          {month: 'March', A: 30, B: 50, C: 10},
+        ]}
+        labels="month"
+        title="Monthly Revenue"
+      />
+    </>
+  )
 }
 
 export default App;
