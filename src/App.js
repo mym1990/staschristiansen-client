@@ -155,7 +155,7 @@ export default function Blog() {
       <CssBaseline />
       <Container maxWidth="lg">
         <Toolbar className={classes.toolbar}>
-          <Button size="small">Subscribe</Button>
+          <Button size="small">Subscribe Test</Button>
           <Typography
             component="h2"
             variant="h5"
