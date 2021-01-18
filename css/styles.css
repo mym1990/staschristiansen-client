@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+}
+h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+}
+
+.box {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 1px;
+    border: 1px solid rgba(0,0,0,.2);
+}
+
+#main {
+    justify-content: center;
+}
